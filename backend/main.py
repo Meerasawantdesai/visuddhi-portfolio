@@ -13,7 +13,10 @@ app = FastAPI(title="Doctor Portfolio API")
 # CORS setup
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # In production, specify the actual frontend URL
+    allow_origins=[
+        "http://localhost:5173",
+        "https://visuddhi-portfolio.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
